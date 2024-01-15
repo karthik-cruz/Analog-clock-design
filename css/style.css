@@ -1,0 +1,138 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Poppins:wght@300;400;500;700&family=Salsa&display=swap');
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    background-color: #2f3640;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.analog-clock{
+    width: 500px;
+    height: 500px;
+    
+    background: url(/images/ks.jpg);
+    background-size: contain ;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    border: 20px ridge rgb(10, 99, 143);
+    position: relative;
+}
+
+.analog-clock::after{
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: red;
+    position: absolute;
+    z-index: 5;
+}
+
+.analog-clock::before{
+    content: 'karthikSwetha';
+    color: white;
+    font-size: 25px;
+    font-family: 'Salsa', cursive;
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.number{
+    --rotate:0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    color:rgb(18, 2, 30);
+    transform: rotate(var(--rotate));
+}
+
+.number-1{
+ --rotate:30deg;
+}
+.number-2{
+ --rotate:60deg;
+}
+.number-3{
+ --rotate:90deg;
+}
+.number-4{
+ --rotate:1200deg;
+}
+.number-5{
+ --rotate:150deg;
+}
+.number-6{
+ --rotate:180deg;
+}
+.number-7{
+ --rotate:210deg;
+}
+.number-8{
+ --rotate:240deg;
+}
+.number-9{
+ --rotate:270deg;
+}
+.number-10{
+ --rotate:300deg;
+}
+.number-11{
+ --rotate:330deg;
+}
+
+.needle{
+    --rotation :0;
+    position: absolute;
+    
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: translate(-50%) rotate(calc(var(--rotation)*1deg)) ;
+    border-top-left-radius: 50% ;
+    border-top-right-radius: 50% ;
+}
+
+.sec{
+    background-color: red;
+    width: 2px;
+    height: 43%;
+}
+.hrs{
+    background-color: rgb(18, 105, 43);
+    width: 10px;
+    height: 28%;
+}
+.min{
+    background-color: rgb(100, 11, 195);
+    width: 7px;
+    height: 41%;
+}
